@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Habitaciones · Reserva Indígena Maguaré</title>
+<meta name="description" content="Habitaciones y cabañas en la Reserva Indígena Maguaré, Amazonas, Colombia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="barra">
+  <div class="barra-interior">
+    <a href="index.html" class="marca">Reserva Maguaré<span>Amazonas · Colombia</span></a>
+    <button class="menu-btn" onclick="alternarMenu()" aria-label="Menú"><span></span><span></span><span></span></button>
+    <ul class="menu">
+      <li><a href="index.html"><span lang="es">Inicio</span><span lang="en">Home</span></a></li>
+      <li><a href="habitaciones.html"><span lang="es">Habitaciones</span><span lang="en">Rooms</span></a></li>
+      <li><a href="actividades.html"><span lang="es">Actividades</span><span lang="en">Activities</span></a></li>
+      <li><a href="como-llegar.html"><span lang="es">Cómo llegar</span><span lang="en">Getting here</span></a></li>
+      <li><a href="contacto.html"><span lang="es">Contacto</span><span lang="en">Contact</span></a></li>
+      <li><button class="idioma" onclick="cambiarIdioma()">English</button></li>
+    </ul>
+  </div>
+</header>
+
+<section>
+  <div class="envoltura">
+    <p class="eyebrow"><span lang="es">Dónde dormir</span><span lang="en">Where you'll sleep</span></p>
+    <h1 class="seccion-titulo"><span lang="es">Habitaciones</span><span lang="en">Rooms</span></h1>
+    <p class="intro-texto">
+      <span lang="es">Espacios sencillos y cómodos, hechos con materiales de la región. Cada estadía incluye desayuno. Escríbenos para conocer disponibilidad y precios según las fechas.</span>
+      <span lang="en">Simple, comfortable spaces built with materials from the region. Every stay includes breakfast. Message us for availability and prices for your dates.</span>
+    </p>
+
+    <div class="tarjetas">
+      <!-- Habitación 1 -->
+      <article class="tarjeta">
+        <img src="imagenes/habitacion-1.jpg" alt="Cabaña familiar">
+        <div class="tarjeta-cuerpo">
+          <h3><span lang="es">Cabaña familiar</span><span lang="en">Family cabin</span></h3>
+          <p class="detalle"><span lang="es">Hasta 4 personas · baño propio · desayuno incluido</span><span lang="en">Up to 4 guests · private bathroom · breakfast included</span></p>
+          <p><span lang="es">Una cabaña amplia para familias o grupos pequeños, rodeada de árboles y con vista al bosque.</span><span lang="en">A spacious cabin for families or small groups, surrounded by trees with a view of the forest.</span></p>
+          <a class="wa" href="https://wa.me/000000000000?text=Hola%2C%20me%20interesa%20la%20Caba%C3%B1a%20familiar" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.01c-.25.7-1.44 1.33-1.99 1.41-.53.08-1.2.11-1.94-.12-.45-.14-1.02-.33-1.76-.65-3.1-1.34-5.13-4.46-5.28-4.67-.16-.21-1.27-1.69-1.27-3.23s.81-2.29 1.09-2.6c.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.19.01.45-.07.7.54.25.61.86 2.11.94 2.26.08.16.13.34.03.55-.1.21-.15.34-.3.52-.15.18-.32.4-.45.54-.15.15-.31.31-.13.61.18.31.79 1.3 1.69 2.11 1.16 1.04 2.14 1.36 2.45 1.51.31.16.49.13.67-.08.18-.21.77-.9.98-1.21.21-.31.41-.26.7-.16.29.11 1.84.87 2.15 1.03.31.15.52.23.6.36.07.13.07.76-.18 1.46z"/></svg>
+            <span lang="es">Preguntar por esta</span><span lang="en">Ask about this room</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Habitación 2 -->
+      <article class="tarjeta">
+        <img src="imagenes/habitacion-2.jpg" alt="Habitación doble">
+        <div class="tarjeta-cuerpo">
+          <h3><span lang="es">Habitación doble</span><span lang="en">Double room</span></h3>
+          <p class="detalle"><span lang="es">2 personas · baño compartido · desayuno incluido</span><span lang="en">2 guests · shared bathroom · breakfast included</span></p>
+          <p><span lang="es">Ideal para parejas o viajeros que quieren estar cerca de todo, con la calma del bosque alrededor.</span><span lang="en">Ideal for couples or travellers who want to be close to everything, with the calm of the forest around them.</span></p>
+          <a class="wa" href="https://wa.me/000000000000?text=Hola%2C%20me%20interesa%20la%20Habitaci%C3%B3n%20doble" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.01c-.25.7-1.44 1.33-1.99 1.41-.53.08-1.2.11-1.94-.12-.45-.14-1.02-.33-1.76-.65-3.1-1.34-5.13-4.46-5.28-4.67-.16-.21-1.27-1.69-1.27-3.23s.81-2.29 1.09-2.6c.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.19.01.45-.07.7.54.25.61.86 2.11.94 2.26.08.16.13.34.03.55-.1.21-.15.34-.3.52-.15.18-.32.4-.45.54-.15.15-.31.31-.13.61.18.31.79 1.3 1.69 2.11 1.16 1.04 2.14 1.36 2.45 1.51.31.16.49.13.67-.08.18-.21.77-.9.98-1.21.21-.31.41-.26.7-.16.29.11 1.84.87 2.15 1.03.31.15.52.23.6.36.07.13.07.76-.18 1.46z"/></svg>
+            <span lang="es">Preguntar por esta</span><span lang="en">Ask about this room</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Habitación 3 -->
+      <article class="tarjeta">
+        <img src="imagenes/habitacion-3.jpg" alt="Hamacas">
+        <div class="tarjeta-cuerpo">
+          <h3><span lang="es">Zona de hamacas</span><span lang="en">Hammock area</span></h3>
+          <p class="detalle"><span lang="es">Por persona · baño compartido · desayuno incluido</span><span lang="en">Per person · shared bathroom · breakfast included</span></p>
+          <p><span lang="es">La opción más económica y la más amazónica: dormir en hamaca bajo techo, mecido por la noche del bosque.</span><span lang="en">The most affordable and most Amazonian option: sleep in a hammock under cover, rocked by the forest night.</span></p>
+          <a class="wa" href="https://wa.me/000000000000?text=Hola%2C%20me%20interesa%20la%20Zona%20de%20hamacas" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.01c-.25.7-1.44 1.33-1.99 1.41-.53.08-1.2.11-1.94-.12-.45-.14-1.02-.33-1.76-.65-3.1-1.34-5.13-4.46-5.28-4.67-.16-.21-1.27-1.69-1.27-3.23s.81-2.29 1.09-2.6c.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.19.01.45-.07.7.54.25.61.86 2.11.94 2.26.08.16.13.34.03.55-.1.21-.15.34-.3.52-.15.18-.32.4-.45.54-.15.15-.31.31-.13.61.18.31.79 1.3 1.69 2.11 1.16 1.04 2.14 1.36 2.45 1.51.31.16.49.13.67-.08.18-.21.77-.9.98-1.21.21-.31.41-.26.7-.16.29.11 1.84.87 2.15 1.03.31.15.52.23.6.36.07.13.07.76-.18 1.46z"/></svg>
+            <span lang="es">Preguntar por esta</span><span lang="en">Ask about this room</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Habitación 4 -->
+      <article class="tarjeta">
+        <img src="imagenes/habitacion-4.jpg" alt="Maloca">
+        <div class="tarjeta-cuerpo">
+          <h3><span lang="es">Maloca compartida</span><span lang="en">Shared maloca</span></h3>
+          <p class="detalle"><span lang="es">Grupos · espacio común · desayuno incluido</span><span lang="en">Groups · shared space · breakfast included</span></p>
+          <p><span lang="es">Un espacio tradicional para grupos que viajan juntos y quieren vivir la experiencia comunitaria de cerca.</span><span lang="en">A traditional space for groups travelling together who want to live the community experience up close.</span></p>
+          <a class="wa" href="https://wa.me/000000000000?text=Hola%2C%20me%20interesa%20la%20Maloca%20compartida" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.01c-.25.7-1.44 1.33-1.99 1.41-.53.08-1.2.11-1.94-.12-.45-.14-1.02-.33-1.76-.65-3.1-1.34-5.13-4.46-5.28-4.67-.16-.21-1.27-1.69-1.27-3.23s.81-2.29 1.09-2.6c.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.19.01.45-.07.7.54.25.61.86 2.11.94 2.26.08.16.13.34.03.55-.1.21-.15.34-.3.52-.15.18-.32.4-.45.54-.15.15-.31.31-.13.61.18.31.79 1.3 1.69 2.11 1.16 1.04 2.14 1.36 2.45 1.51.31.16.49.13.67-.08.18-.21.77-.9.98-1.21.21-.31.41-.26.7-.16.29.11 1.84.87 2.15 1.03.31.15.52.23.6.36.07.13.07.76-.18 1.46z"/></svg>
+            <span lang="es">Preguntar por esta</span><span lang="en">Ask about this room</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="envoltura">
+    <div class="franja">
+      <h2><span lang="es">¿No sabes cuál elegir?</span><span lang="en">Not sure which to choose?</span></h2>
+      <p><span lang="es">Cuéntanos cuántos vienen y qué fechas, y te ayudamos a encontrar el espacio ideal.</span><span lang="en">Tell us how many of you are coming and your dates, and we'll help you find the right space.</span></p>
+      <a class="wa wa-grande" href="https://wa.me/000000000000?text=Hola%2C%20necesito%20ayuda%20para%20elegir%20habitaci%C3%B3n" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.01c-.25.7-1.44 1.33-1.99 1.41-.53.08-1.2.11-1.94-.12-.45-.14-1.02-.33-1.76-.65-3.1-1.34-5.13-4.46-5.28-4.67-.16-.21-1.27-1.69-1.27-3.23s.81-2.29 1.09-2.6c.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.19.01.45-.07.7.54.25.61.86 2.11.94 2.26.08.16.13.34.03.55-.1.21-.15.34-.3.52-.15.18-.32.4-.45.54-.15.15-.31.31-.13.61.18.31.79 1.3 1.69 2.11 1.16 1.04 2.14 1.36 2.45 1.51.31.16.49.13.67-.08.18-.21.77-.9.98-1.21.21-.31.41-.26.7-.16.29.11 1.84.87 2.15 1.03.31.15.52.23.6.36.07.13.07.76-.18 1.46z"/></svg>
+        <span lang="es">Escríbenos</span><span lang="en">Message us</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="pie-interior">
+    <div>
+      <div class="marca">Reserva Indígena Maguaré</div>
+      <p style="max-width:34ch;font-size:0.95rem;"><span lang="es">Hospedaje comunitario en la selva amazónica, cerca de Leticia, Colombia.</span><span lang="en">Community-run guesthouse in the Amazon rainforest, near Leticia, Colombia.</span></p>
+    </div>
+    <div>
+      <h4><span lang="es">Navegar</span><span lang="en">Explore</span></h4>
+      <ul>
+        <li><a href="habitaciones.html"><span lang="es">Habitaciones</span><span lang="en">Rooms</span></a></li>
+        <li><a href="actividades.html"><span lang="es">Actividades</span><span lang="en">Activities</span></a></li>
+        <li><a href="como-llegar.html"><span lang="es">Cómo llegar</span><span lang="en">Getting here</span></a></li>
+        <li><a href="contacto.html"><span lang="es">Contacto</span><span lang="en">Contact</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>WhatsApp</h4>
+      <ul>
+        <li><a href="https://wa.me/000000000000" target="_blank" rel="noopener">+00 000 000 0000</a></li>
+        <li><a href="contacto.html"><span lang="es">Escríbenos</span><span lang="en">Message us</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="pie-abajo">© 2026 Reserva Indígena Maguaré · <span lang="es">Hecho con cuidado en la Amazonía</span><span lang="en">Made with care in the Amazon</span></div>
+</footer>
+
+<a class="wa wa-flotante" href="https://wa.me/000000000000?text=Hola%2C%20quiero%20reservar" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.01c-.25.7-1.44 1.33-1.99 1.41-.53.08-1.2.11-1.94-.12-.45-.14-1.02-.33-1.76-.65-3.1-1.34-5.13-4.46-5.28-4.67-.16-.21-1.27-1.69-1.27-3.23s.81-2.29 1.09-2.6c.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.19.01.45-.07.7.54.25.61.86 2.11.94 2.26.08.16.13.34.03.55-.1.21-.15.34-.3.52-.15.18-.32.4-.45.54-.15.15-.31.31-.13.61.18.31.79 1.3 1.69 2.11 1.16 1.04 2.14 1.36 2.45 1.51.31.16.49.13.67-.08.18-.21.77-.9.98-1.21.21-.31.41-.26.7-.16.29.11 1.84.87 2.15 1.03.31.15.52.23.6.36.07.13.07.76-.18 1.46z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

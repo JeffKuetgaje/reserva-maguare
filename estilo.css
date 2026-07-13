@@ -1,0 +1,306 @@
+/* ===========================================================
+   Reserva Indígena Maguaré
+   Hoja de estilo compartida / Shared stylesheet
+   =========================================================== */
+
+:root {
+  /* Paleta: la selva, el río, el achiote */
+  --canopy:    #1d3a2b;   /* verde dosel profundo */
+  --leaf:      #3f6b4c;   /* verde hoja */
+  --river:     #6b5440;   /* marrón río */
+  --sand:      #f4efe6;   /* fondo claro, arena del río */
+  --clay:      #c4622d;   /* achiote / barro, acento */
+  --clay-dark: #a14a1d;
+  --ink:       #20231f;   /* texto */
+  --muted:     #5c6157;   /* texto secundario */
+  --line:      #d8d0c2;   /* líneas finas */
+
+  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans:  'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --wrap: 1080px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--sand);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--clay-dark); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Idioma: mostrar/ocultar ---------- */
+/* Por defecto mostramos español. El botón cambia a .ver-en */
+[lang="en"] { display: none; }
+body.ver-en [lang="es"] { display: none; }
+body.ver-en [lang="en"] { display: revert; }
+
+/* ---------- Encabezado / nav ---------- */
+.barra {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(244, 239, 230, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.barra-interior {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.marca {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--canopy);
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+.marca span { display: block; font-size: 0.7rem; font-family: var(--sans); font-weight: 500; color: var(--clay); letter-spacing: 0.14em; text-transform: uppercase; }
+
+.menu { display: flex; align-items: center; gap: 1.4rem; list-style: none; }
+.menu a {
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.2rem 0;
+  border-bottom: 2px solid transparent;
+}
+.menu a:hover { color: var(--canopy); border-bottom-color: var(--clay); text-decoration: none; }
+
+.idioma {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border: 1.5px solid var(--canopy);
+  background: transparent;
+  color: var(--canopy);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.idioma:hover { background: var(--canopy); color: var(--sand); }
+
+/* menú hamburguesa móvil */
+.menu-btn { display: none; background: none; border: 0; cursor: pointer; padding: 0.3rem; }
+.menu-btn span { display: block; width: 24px; height: 2px; background: var(--canopy); margin: 5px 0; transition: 0.2s; }
+
+/* ---------- Botón WhatsApp ---------- */
+.wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--clay);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(196, 98, 45, 0.32);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+.wa:hover { background: var(--clay-dark); transform: translateY(-2px); text-decoration: none; box-shadow: 0 9px 24px rgba(196, 98, 45, 0.4); }
+.wa svg { width: 20px; height: 20px; fill: currentColor; }
+.wa-grande { font-size: 1.1rem; padding: 1rem 1.9rem; }
+
+/* botón flotante en móvil */
+.wa-flotante {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 60;
+  box-shadow: 0 8px 22px rgba(196, 98, 45, 0.45);
+}
+
+/* ---------- Secciones generales ---------- */
+.envoltura { max-width: var(--wrap); margin: 0 auto; padding: 0 1.25rem; }
+section { padding: 4.5rem 0; }
+.seccion-titulo {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--canopy);
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 0.9rem;
+}
+.intro-texto { max-width: 60ch; color: var(--muted); font-size: 1.08rem; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 86vh;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  padding: 0;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(20,33,24,0.88) 0%, rgba(20,33,24,0.25) 55%, rgba(20,33,24,0.4) 100%),
+    var(--hero-img, #1d3a2b);
+  background-size: cover;
+  background-position: center;
+}
+.hero-contenido {
+  position: relative;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+  width: 100%;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 6.5vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  max-width: 16ch;
+  text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+}
+.hero p {
+  margin-top: 1.1rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  max-width: 46ch;
+  color: rgba(255,255,255,0.92);
+}
+.hero .lugar {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.hero .acciones { margin-top: 1.8rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+/* ---------- Destacados (3 columnas) ---------- */
+.destacados { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-top: 2.5rem; }
+.destacado { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 1.8rem; }
+.destacado .icono { font-size: 1.8rem; margin-bottom: 0.7rem; }
+.destacado h3 { font-family: var(--serif); font-size: 1.25rem; color: var(--canopy); margin-bottom: 0.4rem; font-weight: 600; }
+.destacado p { color: var(--muted); font-size: 0.97rem; }
+
+/* ---------- Bloque alterno texto + foto ---------- */
+.bloque { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
+.bloque + .bloque { margin-top: 3rem; }
+.bloque img { border-radius: 14px; aspect-ratio: 4/3; object-fit: cover; width: 100%; background: var(--leaf); }
+.bloque.invertido .texto { order: 2; }
+
+/* ---------- Galería ---------- */
+.galeria { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin-top: 2rem; }
+.galeria img { aspect-ratio: 1; object-fit: cover; border-radius: 10px; background: var(--leaf); }
+.galeria a:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.galeria a:nth-child(1) img { aspect-ratio: 1; height: 100%; }
+
+/* ---------- Tarjetas de habitación / actividad ---------- */
+.tarjetas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem; margin-top: 2.5rem; }
+.tarjeta { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+.tarjeta img { aspect-ratio: 3/2; object-fit: cover; background: var(--leaf); }
+.tarjeta-cuerpo { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+.tarjeta h3 { font-family: var(--serif); font-size: 1.4rem; color: var(--canopy); margin-bottom: 0.4rem; font-weight: 600; }
+.tarjeta .detalle { font-size: 0.85rem; color: var(--clay); font-weight: 600; letter-spacing: 0.04em; margin-bottom: 0.7rem; }
+.tarjeta p { color: var(--muted); font-size: 0.97rem; margin-bottom: 1.2rem; flex: 1; }
+.tarjeta .wa { align-self: flex-start; font-size: 0.92rem; padding: 0.7rem 1.2rem; }
+
+/* ---------- Pasos (cómo reservar / cómo llegar) ---------- */
+.pasos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-top: 2.5rem; counter-reset: paso; }
+.paso { position: relative; padding-top: 3rem; }
+.paso::before {
+  counter-increment: paso;
+  content: counter(paso);
+  position: absolute;
+  top: 0; left: 0;
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--clay);
+  width: 2.6rem; height: 2.6rem;
+  border-radius: 50%;
+  display: grid; place-items: center;
+}
+.paso h3 { font-family: var(--serif); color: var(--canopy); font-size: 1.2rem; margin-bottom: 0.3rem; font-weight: 600; }
+.paso p { color: var(--muted); font-size: 0.97rem; }
+
+/* ---------- Franja de llamada (CTA) ---------- */
+.franja {
+  background: var(--canopy);
+  color: var(--sand);
+  text-align: center;
+  border-radius: 20px;
+  padding: 3.5rem 1.5rem;
+}
+.franja h2 { font-family: var(--serif); font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 0.7rem; font-weight: 600; }
+.franja p { max-width: 46ch; margin: 0 auto 1.8rem; color: rgba(244,239,230,0.85); }
+
+/* ---------- Pie ---------- */
+footer { background: var(--canopy); color: rgba(244,239,230,0.8); padding: 3rem 0 2rem; }
+.pie-interior { max-width: var(--wrap); margin: 0 auto; padding: 0 1.25rem; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; }
+footer .marca { color: var(--sand); margin-bottom: 0.6rem; }
+footer h4 { color: var(--sand); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.8rem; }
+footer ul { list-style: none; }
+footer li { margin-bottom: 0.5rem; }
+footer a { color: rgba(244,239,230,0.8); font-size: 0.95rem; }
+footer a:hover { color: var(--sand); }
+.pie-abajo { max-width: var(--wrap); margin: 2.5rem auto 0; padding: 1.5rem 1.25rem 0; border-top: 1px solid rgba(244,239,230,0.18); font-size: 0.85rem; color: rgba(244,239,230,0.6); }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 760px) {
+  .menu-btn { display: block; }
+  .menu {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--sand);
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem 1.25rem 1rem;
+    display: none;
+  }
+  .menu.abierto { display: flex; }
+  .menu li { width: 100%; }
+  .menu a { display: block; padding: 0.7rem 0; width: 100%; }
+
+  .destacados, .pasos, .tarjetas, .galeria { grid-template-columns: 1fr; }
+  .galeria a:nth-child(1) { grid-column: span 1; }
+  .bloque { grid-template-columns: 1fr; gap: 1.4rem; }
+  .bloque.invertido .texto { order: 0; }
+  .pie-interior { grid-template-columns: 1fr; gap: 1.5rem; }
+  section { padding: 3.2rem 0; }
+  .hero { min-height: 80vh; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition: none !important; }
+}
+
+:focus-visible { outline: 3px solid var(--clay); outline-offset: 2px; border-radius: 4px; }
