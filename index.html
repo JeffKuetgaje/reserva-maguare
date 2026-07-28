@@ -34,8 +34,13 @@
 </header>
 
 <!-- ===== HERO ===== -->
-<!-- Para cambiar la foto: edita la línea de abajo (--hero-img) y pon la ruta de tu imagen -->
-<section class="hero" style="--hero-img: url('imagenes/selva.jpg');">
+<!-- Fondo de video: la llegada a la reserva por el río Amazonas.
+     Para volver a una foto fija, borra el <video> de abajo y añade
+     style="--hero-img: url('imagenes/selva.jpg');" en la etiqueta <section>. -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="imagenes/hero-poster.jpg">
+    <source src="imagenes/video-llegada.mp4" type="video/mp4">
+  </video>
   <div class="hero-contenido">
     <span class="lugar">Leticia · Amazonas · Colombia</span>
     <h1>
@@ -59,12 +64,8 @@
 <!-- ===== BIENVENIDA ===== -->
 <section>
   <div class="envoltura">
-    <p class="eyebrow"><span lang="es">Quiénes somos</span><span lang="en">Who we are</span></p>
-    <h2 class="seccion-titulo">
-      <span lang="es">Una reserva viva, no un hotel</span>
-      <span lang="en">A living reserve, not a hotel</span>
-    </h2>
-    <p class="intro-texto">
+    <p class="eyebrow eyebrow-centrado"><span lang="es">Quiénes somos</span><span lang="en">Who we are</span></p>
+    <p class="intro-texto intro-ancha">
       <span lang="es">Maguaré es una reserva indígena cerca de Leticia, sobre el río Amazonas. Aquí no encontrarás una cadena ni un edificio: encontrarás a una comunidad que abre su territorio para compartir su forma de vivir con quienes llegan con respeto. Lo que pagas sostiene a las familias y al cuidado del bosque.</span>
       <span lang="en">Maguaré is an Indigenous reserve near Leticia, on the Amazon river. You won't find a chain or a building here: you'll find a community that opens its territory to share its way of life with those who arrive with respect. What you pay sustains the families and the care of the forest.</span>
     </p>
@@ -95,11 +96,12 @@
     <p class="eyebrow"><span lang="es">El lugar</span><span lang="en">The place</span></p>
     <h2 class="seccion-titulo"><span lang="es">Un vistazo</span><span lang="en">A glimpse</span></h2>
     <div class="galeria">
-      <a href="actividades.html"><img src="imagenes/galeria-1.jpg" alt="Selva amazónica"></a>
-      <a href="habitaciones.html"><img src="imagenes/galeria-2.jpg" alt="Habitación"></a>
-      <a href="actividades.html"><img src="imagenes/galeria-3.jpg" alt="Río"></a>
-      <a href="actividades.html"><img src="imagenes/galeria-4.jpg" alt="Comida"></a>
-      <a href="actividades.html"><img src="imagenes/galeria-5.jpg" alt="Comunidad"></a>
+      <a href="como-llegar.html"><img src="imagenes/galeria-1.jpg" alt="Vista desde la canoa navegando el río Amazonas" loading="lazy"></a>
+      <a href="actividades.html"><img src="imagenes/galeria-2.jpg" alt="Maloca tradicional de techo de palma entre palmeras" loading="lazy"></a>
+      <a href="actividades.html"><img src="imagenes/galeria-3.jpg" alt="Tambores maguaré tallados dentro de la maloca" loading="lazy"></a>
+      <a href="habitaciones.html"><img src="imagenes/galeria-4.jpg" alt="Cabaña de madera con techo de palma al atardecer" loading="lazy"></a>
+      <a href="habitaciones.html"><img src="imagenes/galeria-5.jpg" alt="Cabañas de palma al atardecer en la reserva" loading="lazy"></a>
+      <a href="como-llegar.html"><img src="imagenes/galeria-6.jpg" alt="El río Amazonas con una lancha llegando a la reserva" loading="lazy"></a>
     </div>
   </div>
 </section>
