@@ -265,7 +265,7 @@ section { padding: 4.5rem 0; }
 }
 .tarjeta-foto img { transition: transform 0.4s ease; }
 .tarjeta-foto:hover img { transform: scale(1.04); }
-.tarjeta-foto .ver-fotos {
+.tarjeta-foto .ver-fotos, .bloque-foto .ver-fotos {
   position: absolute;
   bottom: 0.7rem;
   right: 0.7rem;
@@ -280,8 +280,23 @@ section { padding: 4.5rem 0; }
   border-radius: 999px;
   backdrop-filter: blur(3px);
 }
-.tarjeta-foto .ver-fotos svg { width: 15px; height: 15px; fill: currentColor; }
+.tarjeta-foto .ver-fotos svg, .bloque-foto .ver-fotos svg { width: 15px; height: 15px; fill: currentColor; }
 .tarjeta { overflow: hidden; }
+
+/* Foto clicable dentro de un bloque de actividad */
+.bloque-foto {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 14px;
+}
+.bloque-foto img { border-radius: 14px; aspect-ratio: 4/3; object-fit: cover; width: 100%; transition: transform 0.4s ease; }
+.bloque-foto:hover img { transform: scale(1.04); }
 
 /* ---------- Lightbox / galería ---------- */
 .lightbox {

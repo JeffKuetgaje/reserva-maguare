@@ -39,9 +39,12 @@
     <div class="bloque" style="margin-top:2.5rem;">
       <div class="texto">
         <h3 style="font-family:var(--serif);color:var(--canopy);font-size:1.6rem;margin-bottom:0.5rem;"><span lang="es">Caminatas por la selva</span><span lang="en">Forest walks</span></h3>
-        <p style="color:var(--muted);"><span lang="es">Recorre senderos con un guía de la comunidad que te muestra árboles medicinales, huellas de animales y los sonidos del bosque. De día o de noche, cuando la selva cambia por completo.</span><span lang="en">Walk the trails with a community guide who shows you medicinal trees, animal tracks and the sounds of the forest. By day or by night, when the jungle transforms completely.</span></p>
+        <p style="color:var(--muted);"><span lang="es">Recorre senderos con un guía de la comunidad que te muestra árboles gigantes y medicinales, huellas de animales y los sonidos del bosque. De día o de noche, cuando la selva cambia por completo.</span><span lang="en">Walk the trails with a community guide who shows you giant and medicinal trees, animal tracks and the sounds of the forest. By day or by night, when the jungle transforms completely.</span></p>
       </div>
-      <img src="imagenes/actividad-selva.jpg" alt="Caminata en la selva">
+      <button type="button" class="bloque-foto" data-galeria="caminata" aria-label="Ver fotos de las caminatas por la selva">
+        <img src="imagenes/caminata-1.jpg" alt="Grupo caminando junto a un árbol gigante en la selva amazónica">
+        <span class="ver-fotos"><svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.9 13.98l2.1 2.53 3.1-3.99 3.9 5.48H5l3.9-4.02z"/></svg><span lang="es">Ver 5 fotos</span><span lang="en">View 5 photos</span></span>
+      </button>
     </div>
 
     <div class="bloque invertido">
@@ -55,9 +58,12 @@
     <div class="bloque">
       <div class="texto">
         <h3 style="font-family:var(--serif);color:var(--canopy);font-size:1.6rem;margin-bottom:0.5rem;"><span lang="es">Cultura y saberes</span><span lang="en">Culture and knowledge</span></h3>
-        <p style="color:var(--muted);"><span lang="es">Comparte con la comunidad sus historias, su lengua, su música y la forma en que cuidan el territorio. No es un espectáculo: es una invitación a conocer de verdad.</span><span lang="en">Share in the community's stories, language, music and the way they care for the land. This isn't a show: it's an invitation to truly understand.</span></p>
+        <p style="color:var(--muted);"><span lang="es">Comparte con la comunidad sus historias, su lengua, su música y la forma en que cuidan el territorio. Conoce los frutos de la selva, sus tradiciones y artesanías, y visita otras comunidades del río.</span><span lang="en">Share in the community's stories, language, music and the way they care for the land. Discover the fruits of the forest, their traditions and crafts, and visit other communities along the river.</span></p>
       </div>
-      <img src="imagenes/actividad-cultura.jpg" alt="Cultura de la comunidad">
+      <button type="button" class="bloque-foto" data-galeria="cultura" aria-label="Ver fotos de cultura y saberes">
+        <img src="imagenes/cultura-1.jpg" alt="Maloca tradicional de la comunidad entre palmeras">
+        <span class="ver-fotos"><svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.9 13.98l2.1 2.53 3.1-3.99 3.9 5.48H5l3.9-4.02z"/></svg><span lang="es">Ver 9 fotos</span><span lang="en">View 9 photos</span></span>
+      </button>
     </div>
 
     <div class="bloque invertido">
@@ -113,6 +119,29 @@
   <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.01c-.25.7-1.44 1.33-1.99 1.41-.53.08-1.2.11-1.94-.12-.45-.14-1.02-.33-1.76-.65-3.1-1.34-5.13-4.46-5.28-4.67-.16-.21-1.27-1.69-1.27-3.23s.81-2.29 1.09-2.6c.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.19.01.45-.07.7.54.25.61.86 2.11.94 2.26.08.16.13.34.03.55-.1.21-.15.34-.3.52-.15.18-.32.4-.45.54-.15.15-.31.31-.13.61.18.31.79 1.3 1.69 2.11 1.16 1.04 2.14 1.36 2.45 1.51.31.16.49.13.67-.08.18-.21.77-.9.98-1.21.21-.31.41-.26.7-.16.29.11 1.84.87 2.15 1.03.31.15.52.23.6.36.07.13.07.76-.18 1.46z"/></svg>
 </a>
 
+<!-- ===== LIGHTBOX / GALERÍA DE FOTOS ===== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galería de fotos">
+  <button class="lb-cerrar" type="button" aria-label="Cerrar">&times;</button>
+  <button class="lb-prev" type="button" aria-label="Foto anterior">&#10094;</button>
+  <img class="lb-img" src="" alt="">
+  <button class="lb-sig" type="button" aria-label="Foto siguiente">&#10095;</button>
+  <div class="lb-contador"></div>
+</div>
+
+<!-- Fotos de cada actividad. Para añadir más, sube la imagen a imagenes/ y agrega su ruta aquí. -->
+<script>
+  window.GALERIAS = {
+    caminata: [
+      "imagenes/caminata-1.jpg","imagenes/caminata-2.jpg","imagenes/caminata-3.jpg",
+      "imagenes/caminata-4.jpg","imagenes/caminata-5.jpg"
+    ],
+    cultura: [
+      "imagenes/cultura-1.jpg","imagenes/cultura-2.jpg","imagenes/cultura-3.jpg",
+      "imagenes/cultura-4.jpg","imagenes/cultura-5.jpg","imagenes/cultura-6.jpg",
+      "imagenes/cultura-7.jpg","imagenes/cultura-8.jpg","imagenes/cultura-9.jpg"
+    ]
+  };
+</script>
 <script src="script.js"></script>
 </body>
 </html>
