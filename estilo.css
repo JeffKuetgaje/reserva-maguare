@@ -159,6 +159,8 @@ section { padding: 4.5rem 0; }
   line-height: 1.65;
   color: var(--ink);
 }
+/* Intro que ocupa todo el ancho de la página */
+.intro-full { max-width: none; font-size: clamp(1.1rem, 1.8vw, 1.35rem); line-height: 1.6; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -170,7 +172,7 @@ section { padding: 4.5rem 0; }
   padding: 0;
   overflow: hidden;
   /* Imagen base (se ve mientras carga el video y si se reduce el movimiento) */
-  background: #14211a url('imagenes/hero-poster.jpg') center 32% / cover;
+  background: #14211a url('imagenes/hero-poster.jpg') center 35% / cover;
 }
 /* Video de fondo del hero: encuadrado para mantener la línea de árboles centrada */
 .hero-video {
@@ -179,7 +181,7 @@ section { padding: 4.5rem 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 32%;
+  object-position: center 35%;
   z-index: 0;
 }
 .hero::before {
@@ -349,6 +351,16 @@ section { padding: 4.5rem 0; }
 .tarjeta .detalle { font-size: 0.85rem; color: var(--clay); font-weight: 600; letter-spacing: 0.04em; margin-bottom: 0.7rem; }
 .tarjeta p { color: var(--muted); font-size: 0.97rem; margin-bottom: 1.2rem; flex: 1; }
 .tarjeta .wa { align-self: flex-start; font-size: 0.92rem; padding: 0.7rem 1.2rem; }
+
+/* ---------- Mapa ---------- */
+.mapa {
+  margin-top: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(20, 33, 24, 0.08);
+}
+.mapa iframe { display: block; width: 100%; }
 
 /* ---------- Pasos (cómo reservar / cómo llegar) ---------- */
 .pasos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-top: 2.5rem; counter-reset: paso; }
