@@ -352,6 +352,64 @@ section { padding: 4.5rem 0; }
 .tarjeta p { color: var(--muted); font-size: 0.97rem; margin-bottom: 1.2rem; flex: 1; }
 .tarjeta .wa { align-self: flex-start; font-size: 0.92rem; padding: 0.7rem 1.2rem; }
 
+/* ---------- Planes / paquetes ---------- */
+.plan {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 2rem 2rem 2.2rem;
+  margin-top: 2.2rem;
+}
+.plan-cabecera { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap; }
+.plan-duracion {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 0.25rem;
+}
+.plan-nombre { font-family: var(--serif); font-weight: 600; font-size: clamp(1.5rem, 3vw, 1.9rem); color: var(--canopy); line-height: 1.12; }
+.plan-precio-caja { text-align: right; }
+.plan-precio { font-family: var(--serif); font-weight: 600; font-size: 1.6rem; color: var(--canopy); line-height: 1.1; }
+.plan-precio small { font-family: var(--sans); font-weight: 500; font-size: 0.9rem; color: var(--muted); }
+.plan-porpersona { font-size: 0.85rem; color: var(--muted); }
+.xe-enlace { display: inline-block; font-size: 0.82rem; margin-top: 0.3rem; }
+.plan-intro { color: var(--muted); margin-top: 1rem; max-width: 72ch; }
+
+.plan-itinerario { margin-top: 1.5rem; border-top: 1px solid var(--line); }
+.plan-itinerario details { border-bottom: 1px solid var(--line); }
+.plan-itinerario summary { cursor: pointer; padding: 0.8rem 0.2rem; font-weight: 600; color: var(--canopy); }
+.plan-itinerario summary:hover { color: var(--clay-dark); }
+.plan-itinerario ul { list-style: none; padding: 0.2rem 0 1rem; color: var(--muted); font-size: 0.97rem; }
+.plan-itinerario li { position: relative; padding: 0.14rem 0 0.14rem 1.2rem; }
+.plan-itinerario li::before { content: "·"; position: absolute; left: 0.35rem; color: var(--clay); font-weight: 700; }
+
+.plan-incluye { margin-top: 1.5rem; }
+.plan-incluye h3 { font-family: var(--serif); color: var(--canopy); font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; }
+.plan-incluye ul, .lista-si, .lista-no { list-style: none; color: var(--muted); font-size: 0.97rem; }
+.plan-incluye li, .lista-si li, .lista-no li { position: relative; padding: 0.14rem 0 0.14rem 1.6rem; }
+.plan-incluye li::before, .lista-si li::before { content: "✔"; position: absolute; left: 0; color: var(--leaf); font-weight: 600; }
+.lista-no li::before { content: "✘"; position: absolute; left: 0; color: var(--clay-dark); font-weight: 600; }
+.plan .wa { margin-top: 1.7rem; align-self: flex-start; }
+
+.plan-condiciones { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 2.5rem; }
+.condicion { background: var(--sand); border: 1px dashed var(--river); border-radius: 14px; padding: 1.6rem; }
+.condicion h3 { font-family: var(--serif); color: var(--canopy); font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; }
+
+/* Botón sencillo (enlaces internos, p. ej. "Ver los planes") */
+.boton {
+  display: inline-block;
+  background: var(--canopy);
+  color: var(--sand);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  transition: background 0.15s, transform 0.15s;
+}
+.boton:hover { background: var(--leaf); text-decoration: none; transform: translateY(-2px); color: #fff; }
+
 /* ---------- Mapa ---------- */
 .mapa {
   margin-top: 2.5rem;
@@ -422,7 +480,9 @@ footer a:hover { color: var(--sand); }
   .menu li { width: 100%; }
   .menu a { display: block; padding: 0.7rem 0; width: 100%; }
 
-  .destacados, .pasos, .tarjetas, .galeria { grid-template-columns: 1fr; }
+  .destacados, .pasos, .tarjetas, .galeria, .plan-condiciones { grid-template-columns: 1fr; }
+  .plan { padding: 1.5rem 1.25rem 1.8rem; }
+  .plan-precio-caja { text-align: left; }
   .galeria a:nth-child(1) { grid-column: span 1; }
   .bloque { grid-template-columns: 1fr; gap: 1.4rem; }
   .bloque.invertido .texto { order: 0; }
